@@ -17,7 +17,7 @@ export default {
       error:'',
       stories:[]
     }
- 
+
   },  created: function () {
     axios.get('https://hacker-news.firebaseio.com/v0/topstories.json')
       .then((result) => {
@@ -39,5 +39,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+h2{
+  padding-top: 10px;
+  text-align: center;
+}
 </style>

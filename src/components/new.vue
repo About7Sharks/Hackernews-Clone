@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>New Post</h2>
+        <h2>New Posts</h2>
       <item v-for="story in stories" :key="story.data.id" :story="story"/>
     </div>
 </template>
@@ -17,7 +17,7 @@ export default {
       error:'',
       stories:[]
     }
- 
+
   },  created: function () {
     axios.get('https://hacker-news.firebaseio.com/v0/newstories.json')
       .then((result) => {
@@ -39,5 +39,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+h2{
+  text-align: center;
+  padding-top: 10px;
+}
 </style>
